@@ -1,0 +1,15 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5131
+
+
+
+This is a plugin for controlling your vim editor by starting a Python server inside it until you quit vim. This is an alternative to "vim -servername", which I could not use on a terminal only environment. Also, does not need a X-server.
+
+Whit VimPyServer you can:
+
+- Integrate your Cygwin-based Vim editor with Windows Explorer and edit every file on a single vim instance!
+
+- Send commands to you current open vim editor from another terminal, even from another computer!
+
+- Remotely control your current open vim editor, integrate it on an IDE automate actions!
+
+Project repository: https://github.com/degyves/VimPyServer
