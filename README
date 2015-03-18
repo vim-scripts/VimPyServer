@@ -1,15 +1,38 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=5131
 
-
-
-This is a plugin for controlling your vim editor by starting a Python server inside it until you quit vim. This is an alternative to "vim -servername", which I could not use on a terminal only environment. Also, does not need a X-server.
+This is a plugin to control your vim editor via telnet. It starts a Python server inside Vim until you close the editor. This is an alternative to "vim -servername", which I could not use on a terminal only environment (it appears it requires X11).
 
 Whit VimPyServer you can:
 
-- Integrate your Cygwin-based Vim editor with Windows Explorer and edit every file on a single vim instance!
-
+- Integrate the edition of every file on your computer (Windows explorer, Firefox, mutt, etc) on a single instance of Vim editor (cygwin based or not). No more copy-paste hell, no more vim editors open everywhere! See README.asciidoc included:
+--- Defaulting single Cygwin Vim instance with Windows Explorer "Open with"
+--- Single Vim instance for Firefox + Vimperator
+--- Single Vim instance for mutt (coming soon!)
+- Have fun messing the code of your friends in their faces!
+- Chat with vim - to - vim  and share snippets of code with your buddies, easier than ever!
 - Send commands to you current open vim editor from another terminal, even from another computer!
-
 - Remotely control your current open vim editor, integrate it on an IDE automate actions!
 
-Project repository: https://github.com/degyves/VimPyServer
+2. Requirements
+
+- VIM 7.4 with python and python3 (check it with vim --version)
+- Python 2.7.8 (Should work on Python 3. Please send me a message if you test it with version 3).
+- netcat (nc) is needed temporarily. Will be unnecessary on future releases.
+
+3. Installation
+
+- If your are using pathogen just clone it to your ~/.vim/bundle:
+
+  git clone https://github.com/degyves/VimPyServer.git
+
+- Set your environment variables and restart your terminals:
+
+--- Under Windows: add VIMPYSERVER_HOME to your environment variables (WIN+Pause, advanced settings). The value will be the path, in Windows format, of where you have cloned VimPyServer. Also add %VIMPYSERVER_HOME%\bin to your Windows PATH. Do not configure these variables on ~/.bashrc.
+--- Under Linux/Mac: add VIMPYSERVER_HOME to your ~/.bashrc. The value will be the path where you have cloned VimPyServer. Also add $VIMPYSERVER_HOME\bin to your PATH.
+--- Under OpenBSD: add VIMPYSERVER_HOME to your ~/.profile. The value will be the path where you have cloned VimPyServer. Also add $VIMPYSERVER_HOME\bin to your PATH.
+
+Thats it! VimPyServer will own the first vim editor you use. If you open several vim editors, only the first one will be controlled by the VimPyServer. This will be changed later so any vim editor will have the ability to own (or not) its own VimPyServer.
+
+4. Examples and integration.
+
+Please see README.asciidoc or go to https://github.com/degyves/VimPyServer for examples.
